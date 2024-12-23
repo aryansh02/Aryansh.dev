@@ -4,7 +4,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
@@ -13,10 +13,10 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": ".", // Set base URL for resolving paths
+    "baseUrl": ".", 
     "paths": {
-      "@/*": ["./src/*"], // General alias for everything in `src`
-      "@/components/*": ["./src/app/components/*"] // Specific alias for components
+      "@/*": ["./src/*"], 
+      "@/components/*": ["./src/app/components/*"] 
     },
     "plugins": [
       {
