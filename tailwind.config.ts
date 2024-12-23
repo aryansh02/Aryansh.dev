@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,8 +11,31 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        beige: "#EED9C4",
+      },
+      fontFamily: {
+        honk: ["'Honk'", "sans-serif"],
+        serif: ["'Noto Serif'", "serif"],
+        sans: ["'Roboto'", "sans-serif"],
+        playfair: ["'Playfair Display'", "serif"],
+      },
+      animation: {
+        marquee: "marquee 30s linear infinite",
+        marqueeReverse: "marqueeReverse 30s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        marqueeReverse: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
       },
     },
   },
   plugins: [],
-} satisfies Config;
+};
+
+export default config;

@@ -2,20 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000; /* Off-white background */
+  --foreground: #f8f8f8; /* Dark text */
+  --card-bg: #fdfdfd; /* Lighter card background */
+  --accent: #ede1e1; /* Soft accent text color */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+[data-theme="dark"] {
+  --background: #1a1a1a; /* Dark background */
+  --foreground: #f5f5f5; /* Light text */
+  --card-bg: #2a2a2a; /* Dark card background */
+  --accent: #cccccc; /* Softer accent text */
+}
+
+@keyframes movingGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: movingGradient 5s linear infinite;
 }
+
