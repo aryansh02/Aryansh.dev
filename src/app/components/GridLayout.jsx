@@ -1,16 +1,18 @@
 "use client";
 
 import { BentoGrid, BentoCard } from "@/components/ui/BentoGrid";
-import DarkModeToggle from "./DarkModeToggle";
 import TechStackMarquee from "@/components/TechStackMarquee";
 import TechNamesMarquee from "./TechNamesMarquee";
+import Image from 'next/image';
+import React from 'react';
+
 
 export default function GridLayout() {
   return (
     <div className="bg-background pt-12 pb-10 max-w-[85%] mx-auto">
-      {/* Bento Grid with 5 columns */}
+      
       <BentoGrid className="gap-4 grid-cols-5">
-        {/* Top Row */}
+        
         <BentoCard
           className="col-span-2 row-span-1"
           background={
@@ -27,8 +29,8 @@ export default function GridLayout() {
           className="col-span-1 row-span-1"
           background={
             <div className="h-full bg-[#fffef2] rounded-md flex items-center justify-center">
-              <img
-                src="/icons/mypfp.jpg" // Use the converted .jpg or .png file
+              <Image
+                src="/icons/mypfp.jpg" 
                 alt="Profile Picture"
                 className="object-cover w-full h-full rounded-lg"
               />
@@ -44,7 +46,7 @@ export default function GridLayout() {
                 download="Aryansh-Rao-Resume.pdf"
                 className="hover:scale-105 transition-transform duration-300 ease-in-out"
               >
-                <img
+                <Image
                   src="/icons/resume-thumbnail.png"
                   alt="Resume Thumbnail"
                   className="w-42 h-64 object-cover shadow-none border-none rounded-md"
@@ -57,10 +59,10 @@ export default function GridLayout() {
           className="col-span-1 row-span-1"
           background={
             <div className="h-full grid grid-rows-2 grid-cols-3 gap-2 rounded-md bg-black">
-              {/* Top Row: Icons */}
+              
               <div className="flex items-center justify-center rounded-md hover:bg-opacity-90 transition duration-300">
                 <a href="https://www.linkedin.com/in/aryansh02/" target="_blank" rel="noopener noreferrer">
-                  <img
+                  <Image
                     src="/icons/linkedin.png"
                     alt="LinkedIn"
                     className="w-16 h-16 object-contain"
@@ -69,7 +71,7 @@ export default function GridLayout() {
               </div>
               <div className="flex items-center justify-center rounded-md hover:bg-opacity-90 transition duration-300">
                 <a href="https://github.com/aryansh02" target="_blank" rel="noopener noreferrer">
-                  <img
+                  <Image
                     src="/icons/Github-Dark.svg"
                     alt="GitHub"
                     className="w-16 h-16 object-contain"
@@ -78,7 +80,7 @@ export default function GridLayout() {
               </div>
               <div className="flex items-center justify-center rounded-md hover:bg-opacity-90 transition duration-300">
                 <a href="https://open.spotify.com/user/316qptdraiplmvy4p2dv6ifhchoa?si=0ac4f00278ce453d" target="_blank" rel="noopener noreferrer">
-                  <img
+                  <Image
                     src="/icons/spotify.png"
                     alt="Spotify"
                     className="w-16 h-16 object-contain"
@@ -86,7 +88,7 @@ export default function GridLayout() {
                 </a>
               </div>
 
-              {/* Bottom Row: Projects Text */}
+              
               <div className="col-span-3 flex items-center justify-between rounded-md px-4 py-2 bg-black hover:bg-opacity-90 transition duration-300">
                 <a
                   href="https://vercel.com/aryansh02s-projects"
@@ -102,13 +104,13 @@ export default function GridLayout() {
           }
         />
 
-        {/* Second Row */}
+        
         <BentoCard
           className="col-span-1 row-span-1"
           background={
             <div className="h-full bg-[#fffef2] rounded-md flex items-center justify-center">
-              <img
-                src="/icons/setup1.jpg" // Use the converted .jpg or .png file
+              <Image
+                src="/icons/setup1.jpg" 
                 alt="Setup"
                 className="object-cover w-full h-full rounded-md"
               />
@@ -130,6 +132,7 @@ export default function GridLayout() {
             </div>
           }
         />
+
         <BentoCard
           className="col-span-1 row-span-1"
           background={
@@ -151,28 +154,28 @@ export default function GridLayout() {
                 I thrive on the challenge of bringing ideas to life while balancing my love for football, music, exploration, gaming, and reading - passions that fuel both personal and professional growth.
               </p>
               <p className="font-sans mt-6 text-black italic text-md ml-4 mr-3">
-                "We are what we repeatedly do. Excellence, then, is not an act, but a habit." — Aristotle
+              &quot;We are what we repeatedly do. Excellence, then, is not an act, but a habit.&quot; — Aristotle
               </p>
             </div>
           }
         />
 
-        {/* Third Row */}
+        
         <BentoCard
           className="col-span-2 row-span-1"
           background={
             <div className="h-full bg-[#594f3f] rounded-md flex flex-col justify-center p-6 text-[#EED9C4] relative">
-              {/* Top Left Text */}
+              
               <div className="flex items-center justify-between">
                 <p className="font-sans text-sm font-medium">Have a project in mind? Let&apos;s connect!</p>
 
-                {/* Top Right Arrow */}
+                
                 <div className="text-[#EED9C4] text-2xl">
-                  <span>&#8599;</span> {/* North-East arrow */}
+                  <span>&#8599;</span> 
                 </div>
               </div>
 
-              {/* Copy Email Placeholder */}
+              
               <button
                 onClick={() => navigator.clipboard.writeText("aryanshrao8744@gmail.com")}
                 className="w-fit font-sans text-sm bg-[#8C7B6C] bg-opacity-50 text-[#EED9C4] rounded-md px-4 py-2 mt-1 mb-32 hover:bg-opacity-75 active:bg-[#5C4C3C] transition-all duration-300 ease-in-out"
@@ -180,7 +183,7 @@ export default function GridLayout() {
                 Copy Email
               </button>
 
-              {/* Contact Me Link */}
+              
               <a
                 href="https://www.linkedin.com/in/aryansh02/"
                 className="text-6xl font-playfair font-medium hover:underline hover:decoration-[#EED9C4] transition-all duration-300 ease-in-out"
@@ -210,8 +213,8 @@ export default function GridLayout() {
           className="col-span-1 row-span-1"
           background={
             <div className="h-full bg-[#fffef2] rounded-md flex items-center justify-center">
-              <img
-                src="/icons/setup2.jpg" // Use the converted .jpg or .png file
+              <Image
+                src="/icons/setup2.JPG" 
                 alt="Setup"
                 className="object-cover w-full h-full rounded-md"
               />
